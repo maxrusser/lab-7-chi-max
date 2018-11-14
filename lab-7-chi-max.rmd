@@ -49,5 +49,10 @@ guns_prop <- prop.table(as.matrix(get_guns), 1)
 
 guns_prop
 
+# Performing chi-square 
+
+guns_x2 <- chisq.test(get_guns)
+guns_x2
+
 ```
 
