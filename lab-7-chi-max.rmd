@@ -18,4 +18,19 @@ Hey its Juan
 WTF IS THIS WORKING OR WHAT
 TF
 
-what the FUCK is going on
+```{r}
+library(tidyverse)
+
+gc_df <- read_csv("gc_df.csv")
+
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns) %>% 
+  spread(make_get_guns, n) %>% 
+  select(-gender) 
+
+rownames(get_guns) <- c("Female", "Male")
+
+
+```
+
