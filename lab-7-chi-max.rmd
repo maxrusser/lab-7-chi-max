@@ -51,8 +51,11 @@ guns_prop
 
 # Performing chi-square 
 
+# Show table and table of proportions for chi-square 
+
 guns_x2 <- chisq.test(get_guns)
 guns_x2
 
 ```
 
+Recommended government action on gun access differs significantly for males and females ($\chi^2$(`r guns_c2$parameter`) = p < 0.001)
